@@ -4,6 +4,7 @@
 using namespace std;
 
 string encrypt(string, int);
+string decrypt(string, int);
 
 int main(){
 
@@ -17,7 +18,11 @@ int main(){
 
     output = encrypt(input, shift);
 
-    cout << "Output: " << output << endl;
+    cout << "Encrypt: " << output << endl;
+
+    output = encrypt(output, 26 - shift);
+
+    cout << "Decrypt: " << output << endl;
 }
 
 string encrypt(string input, int shift){
